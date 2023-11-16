@@ -15,11 +15,11 @@ class frmFeedback(frmFeedbackTemplate):
   def btnSubmit_click(self, **event_args):
     """This method is called when the button is clicked"""
     # Set 'name' to the text in the 'name_box'
-    name = self..text
+    name = self.tbxName.text
     # Set 'email' to the text in the 'email_box'
-    email = self.email_box.text
+    email = self.tbxEmail.text
     # Set 'feedback' to the text in the 'feedback_box'
-    feedback = self.feedback_box.text
+    feedback = self.txaFeedback.text
     # Call your 'add_feedback' server function
     # pass in name, email and feedback as arguments
     anvil.server.call('add_feedback', name, email, feedback)
@@ -28,6 +28,6 @@ class frmFeedback(frmFeedbackTemplate):
 
   def clear_inputs(self):
     # Clear our three text boxes
-    self.name_box.text = ""
-    self.email_box.text = ""
-    self.feedback_box.text = ""
+    self.tbxName.text = ""
+    self.tbxEmail.text = ""
+    self.txaFeedback.text = ""
