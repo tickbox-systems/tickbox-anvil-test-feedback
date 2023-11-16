@@ -1,7 +1,31 @@
+services:
+- source: /runtime/services/tables.yml
+  client_config: {}
+  server_config: {}
+startup: {type: form, module: frmFeedback}
+package_name: Tickbox_Feedback_MD1
 allow_embedding: false
-package_name: Material_Design_1
-name: Material Design 1
-startup_form: Form1
+name: Tickbox Feedback MD1
 runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
   server_spec: null}
-services: []
+metadata: {title: Tickbox Feedback, description: Let us know what you think about lo-code Python apps!,
+  logo_img: 'asset:Tickbox Systems Ltd Logo 140x39.gif.png'}
+startup_form: null
+db_schema:
+  tblfeedback:
+    client: none
+    server: full
+    columns:
+    - name: Email
+      admin_ui: {width: 200, order: 0}
+      type: string
+    - name: Name
+      admin_ui: {order: -1, width: 200}
+      type: string
+    - name: Feedback
+      admin_ui: {width: 200, order: 1}
+      type: string
+    - name: DateCreated
+      admin_ui: {width: 200, order: 2}
+      type: datetime
+    title: tblFeedback

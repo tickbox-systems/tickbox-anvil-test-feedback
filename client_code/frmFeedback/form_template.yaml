@@ -1,0 +1,52 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - name: card_1
+    properties: {role: card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'BYYPSI,GZAIKR'}
+    components:
+    - name: lblTitle
+      properties: {text: Tickbox Feedback Form, visible: true, role: headline}
+      type: Label
+      layout_properties: {grid_position: 'UJZJRQ,LRURWQ'}
+    - name: lblName
+      properties: {text: 'Name: '}
+      type: Label
+      layout_properties: {grid_position: 'RZBMYZ,VOXBAH'}
+    - name: tbxName
+      properties: {}
+      type: TextBox
+      layout_properties: {grid_position: 'LZMNIU,MIGDFQ'}
+    - name: lblEmail
+      properties: {text: 'Email:'}
+      type: Label
+      layout_properties: {grid_position: 'JCZTIH,QDYNDX'}
+    - name: tbxEmail
+      properties: {}
+      type: TextBox
+      layout_properties: {grid_position: 'OGMVMU,SBYWBN'}
+    - name: lblFeedback
+      properties: {text: 'Feedback:'}
+      type: Label
+      layout_properties: {grid_position: 'JLNWNL,WBHRZO'}
+    - name: txaFeedback
+      properties: {}
+      type: TextArea
+      layout_properties: {grid_position: 'ZVOQDH,RSZFRF'}
+    - name: btnSubmit
+      properties: {text: Submit!, background: 'theme:Secondary 700'}
+      type: Button
+      layout_properties: {grid_position: 'QNBBMZ,WFTMDU'}
+      event_bindings: {click: btnSubmit_click}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
